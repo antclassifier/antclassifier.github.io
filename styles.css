@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Add a gray background color with some padding */
+  body {
+    font-family: Arial;
+    /* padding: 20px; */
+    background: #f1f1f1;
+    margin-bottom: 60px;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    background: white;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    padding-left: 10px;
+    width: 50%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+     background-color: white;
+     padding: 10px;
+     margin-top: 0px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    /* margin-top: 20px; */
+    width: 100%;
+    bottom: 0;
+    margin-top: 50px;
+    position: fixed;
+    height: 60px;
+  }  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 20;
+    }
+  }
+
+
+  .upload {
+    opacity: 0;
+}
+
+.upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-area {
+    /* border: 2px dashed rgba(255, 255, 255, 0.7); */
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Uploaded image result';
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
+
