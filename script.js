@@ -19,16 +19,12 @@ $(document).ready(function(){
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        console.log(1);
         reader.onload = function (e) {
             $('#imageResult')
                 .attr('src', e.target.result);
-                console.log(2);
         };
-        console.log(3);
         reader.readAsDataURL(input.files[0]);
         $('#btnClassify').prop('disabled', false);
-        console.log(4);
     }
 }
 
