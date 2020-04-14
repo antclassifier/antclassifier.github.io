@@ -27,25 +27,3 @@ function readURL(input) {
         $('#btnClassify').prop('disabled', false);
     }
 }
-
-// $(function () {
-//     $('#upload').on('change', function () {
-//         readURL(input);
-//         console.log(5);
-//     });
-// });
-
-/*  ==========================================
-    SHOW UPLOADED IMAGE NAME
-* ========================================== */
-// var input = document.getElementById( 'upload' );
-// console.log(7);
-// var infoArea = document.getElementById( 'upload-label' );
-
-// input.addEventListener( 'change', showFileName );
-// function showFileName( event ) {
-//     console.log(6);
-//   var input = event.srcElement;
-//   var fileName = input.files[0].name;
-//   infoArea.textContent = 'File name: ' + fileName;
-// }
